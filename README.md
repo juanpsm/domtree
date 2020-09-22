@@ -14,19 +14,22 @@ Consideramos que hay un "." (root) siempre, deben armar el árbol que
 representa ese conjunto de datos.
 Ejecutando ese código podremos ayudar a comprender mejor el DNS y lo
 usaremos como materia de apoyo en la materia!
+
 Ejemplo: `Input.txt`
-        www.unlp.edu.ar
-        www.info.unlp.edu.ar
-        www.uba.ar
-        nic.ar
-        www. motorola.com
-        pypi.org
-        stackoverflow.com
+```
+www.unlp.edu.ar
+www.info.unlp.edu.ar
+www.uba.ar
+nic.ar
+www. motorola.com
+pypi.org
+stackoverflow.com
+```
 ### Operaciones a implementar:
-create: Permite crear un árbol a partir de una lista de dominios contenidos en
+- **create:** Permite crear un árbol a partir de una lista de dominios contenidos en
 un archivo.
-query: Permite consultar si un dominio si existe buscando en el árbol.
-add: Permite agregar un nodo.
+- **query:** Permite consultar si un dominio si existe buscando en el árbol.
+- **add:** Permite agregar un nodo.
 ### Premisas:
 - Los nodos solo tienen los ID de sus hijos y no tiene información de sus
 padres!!
