@@ -12,7 +12,7 @@ Opciones:
         -c, --create <route/to/file.txt>
                 Crea un arbol según la lista de dominios (por ejemplo 'www.qq.com')
                 Sin esta opción busca el archivo 'Input.txt' en la carpera donde
-                se encuentra el script.
+                se encuentra el script. Imprime el arbol generado.
 
         -q, --query <dominio> (por ejemplo www.qq.com)
                 Busca que se encuentre el dominio en el arbol (ya sea este creado
@@ -24,8 +24,7 @@ Opciones:
                 Los subdominios que ya estén no se repiten. 
 
         -d, --dict
-                Genera un diccionario en forma de arbol y lo muestra en pantalla
-                si se acompaña con la opción -p
+                Genera un diccionario en forma de arbol y lo muestra en pantalla.
 '''
 HELP = '-h' in sys.argv or '--help' in sys.argv
 CREATE = '-c' if ('-c' in sys.argv) else ('--create' if '--create' in sys.argv else False)
@@ -94,7 +93,9 @@ def treeFromListOfLists(domList):
 def create(filename = FILEIN):
     '''Crear y devolver un arbol de anytree, desde un archivo especificado o 'Input.txt' por defecto'''
     domList = listarDominios(filename)
-    return treeFromListOfLists(domList)
+    domTree = treeFromListOfLists(domList)
+    pprintTree(domTree)
+    return domTree
 
 def findChildren(tree, nombre):
     '''Devuelve, si existe, el Nodo de los hijos del arbol que tenga ese nombre'''
@@ -197,7 +198,6 @@ if __name__ == "__main__":
 
         # Crear arbol
         domTree = create(filename)
-        pprintTree(domTree)
         
         if ADD:
             try:
