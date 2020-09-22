@@ -41,7 +41,7 @@ hormigas!!
 
 ## Clonar de github:
 ```console
-git clone https://github.com/lossh/tpfinalpython
+git clone https://github.com/pibytes/domtree
 cd domtree
 ```
 ## Correr _domtree.py_ 
