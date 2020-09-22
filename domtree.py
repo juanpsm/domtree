@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 CREDITS = '''
     Juan Pablo Sanchez Magariños, UNLP
 '''

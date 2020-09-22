@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from domtree import create, query, add, pprintTree
 
 tree = create()
