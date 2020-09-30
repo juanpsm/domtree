@@ -152,7 +152,7 @@ def query(tree,cadena):
 
 def add(tree, dominio):
     '''Agrega los elementos del dominio que no estén en el árbol, retornando el arbol modificado'''
-    print(f"\nAgregar'{dominio}' al arbol...")
+    print(f"\nAgregar '{dominio}' al arbol...")
     dominioSeparado = separarCadena(dominio)
     busqueda = query(tree, dominio)
     ultimo = busqueda["ultimoCoincidente"]
